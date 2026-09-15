@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milliy Sertifikat — Esse Nazorati Xizmati</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #22314F;
+    --ink-2: #1B2436;
+    --paper: #F1F3F6;
+    --paper-card: #FFFFFF;
+    --line: #D9DEE6;
+    --gold: #B8862E;
+    --gold-soft: #F3E7D2;
+    --green: #3E7859;
+    --green-soft: #E1EEE6;
+    --text: #22314F;
+    --text-dim: #5B6B85;
+    --serif: "Source Serif 4", Georgia, serif;
+    --sans: "Inter", -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #E7ECF5; --ink-2: #F3F6FB; --paper: #10151F; --paper-card: #171E2B;
+      --line: #2A3347; --gold: #D9A94B; --gold-soft: #3A3121;
+      --green: #6FBE93; --green-soft: #1E3226; --text: #E7ECF5; --text-dim: #93A0BA;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #E7ECF5; --ink-2: #F3F6FB; --paper: #10151F; --paper-card: #171E2B;
+    --line: #2A3347; --gold: #D9A94B; --gold-soft: #3A3121;
+    --green: #6FBE93; --green-soft: #1E3226; --text: #E7ECF5; --text-dim: #93A0BA;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--text); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+  .hero { background: var(--ink); color: var(--paper); padding: 56px 0 64px; text-align: center; }
+  .hero-eyebrow { font-size: 13px; letter-spacing: 0.02em; opacity: 0.7; margin-bottom: 14px; }
+  .hero h1 { font-family: var(--serif); font-size: 34px; line-height: 1.25; font-weight: 700; margin: 0 0 16px; }
+  .hero p { font-size: 16px; opacity: 0.85; max-width: 520px; margin: 0 auto 30px; line-height: 1.55; }
+  .cta {
+    display: inline-block; background: var(--gold); color: var(--ink-2);
+    font-weight: 600; font-size: 16px; text-decoration: none; padding: 15px 32px;
+    border-radius: 10px;
+  }
+
+  .section { padding: 52px 0; }
+  .section-title { font-family: var(--serif); font-size: 24px; font-weight: 600; margin: 0 0 28px; color: var(--ink); text-align: center; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+
+  .feature {
+    background: var(--paper-card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 22px;
+  }
+  .feature-icon { font-size: 26px; margin-bottom: 10px; display: block; }
+  .feature h3 { font-size: 16px; margin: 0 0 8px; color: var(--ink); }
+  .feature p { font-size: 13.5px; color: var(--text-dim); margin: 0; line-height: 1.5; }
+
+  .steps { list-style: none; padding: 0; margin: 0; counter-reset: step; }
+  .steps li {
+    counter-increment: step; display: flex; gap: 16px; padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .steps li:last-child { border-bottom: none; }
+  .steps li::before {
+    content: counter(step); flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%;
+    background: var(--gold-soft); color: var(--gold); font-family: var(--serif); font-weight: 700;
+    display: flex; align-items: center; justify-content: center; font-size: 14px;
+  }
+  .steps li div { font-size: 14.5px; padding-top: 4px; line-height: 1.5; }
+
+  .price-card {
+    background: var(--paper-card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 32px; text-align: center; max-width: 320px; margin: 0 auto;
+  }
+  .price-value { font-family: var(--serif); font-size: 40px; font-weight: 700; color: var(--gold); }
+  .price-label { font-size: 13px; color: var(--text-dim); margin-top: 4px; }
+
+  .criteria-list { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .criteria-chip {
+    background: var(--paper-card); border: 1px solid var(--line); border-radius: 999px;
+    padding: 8px 14px; font-size: 13px; color: var(--text);
+  }
+
+  .footer { text-align: center; padding: 40px 0 50px; border-top: 1px solid var(--line); }
+  .footer p { font-size: 13px; color: var(--text-dim); margin: 6px 0; }
+  .footer .cta { margin-top: 18px; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">MILLIY SERTIFIKAT · ONA TILI VA ADABIYOT</div>
+    <h1>Essengiz rasmiy mezon asosida,<br>bir necha soniyada baholansin</h1>
+    <p>Sun'iy intellekt yordamida, Milliy sertifikat imtihonining rasmiy 24 ballik
+       mezoni asosida esse tahlili va baholash xizmati.</p>
+    <a class="cta" href="https://t.me/Wisdom_Esse_tekshiruvchi_bot">Botni ochish →</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="section">
+    <div class="section-title">Xizmat imkoniyatlari</div>
+    <div class="grid">
+      <div class="feature">
+        <span class="feature-icon">✍️</span>
+        <h3>Matn yoki qo'lyozma</h3>
+        <p>Essengizni yozib yuboring yoki daftardagi qo'lyozmani suratga olib jo'nating — ikkisi ham qabul qilinadi.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">📋</span>
+        <h3>Rasmiy 12 mezon</h3>
+        <p>Topshiriq talablari, matn yaxlitligi, savodxonlik, til uslubiyati va lug'at boyligi bo'yicha batafsil tahlil.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">📊</span>
+        <h3>Shaxsiy kabinet</h3>
+        <p>Barcha natijalaringiz tarixi, statistikangiz va mavzular banki bir joyda.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">🎲</span>
+        <h3>Mavzular banki</h3>
+        <p>Mavzu tanlashda qiynalsangiz, bot tasodifiy mavzu tavsiya qiladi.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Qanday ishlaydi</div>
+    <ul class="steps">
+      <li><div>Telegram'da botni oching va qisqa ro'yxatdan o'tasiz (ism-sharif, sinf/guruh).</div></li>
+      <li><div>Kredit sotib olasiz — 1 kredit = 1 esse tekshiruvi.</div></li>
+      <li><div>/tekshir buyrug'i bilan mavzuni kiritib, esse matnini yoki suratini yuborasiz.</div></li>
+      <li><div>Bir necha soniyada rasmiy mezon bo'yicha batafsil tahlil va ball olasiz.</div></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Baholash mezoni</div>
+    <div class="criteria-list">
+      <span class="criteria-chip">Uslub</span>
+      <span class="criteria-chip">Qarashlar yoritilishi</span>
+      <span class="criteria-chip">Dalillash</span>
+      <span class="criteria-chip">Tuzilma</span>
+      <span class="criteria-chip">Mantiqiy izchillik</span>
+      <span class="criteria-chip">Imlo</span>
+      <span class="criteria-chip">Punktuatsiya</span>
+      <span class="criteria-chip">Qo'shimchalar</span>
+      <span class="criteria-chip">So'z qo'llash</span>
+      <span class="criteria-chip">Lug'at boyligi</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Narx</div>
+    <div class="price-card">
+      <div class="price-value">3 000</div>
+      <div class="price-label">so'm / 1 esse tekshiruvi</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Milliy Sertifikat — Rasmiy Esse Nazorati Xizmati</p>
+    <p>Ona tili va adabiyot o'qituvchisi Kamoliddin Raxmatov tomonidan taqdim etiladi</p>
+    <a class="cta" href="https://t.me/Wisdom_Esse_tekshiruvchi_bot">Botga o'tish →</a>
+  </div>
+
+</div>
+
+</body>
+</html>
